@@ -1,0 +1,30 @@
+{
+  "name": "craftygiveaway",
+  "version": "1.0.0",
+  "description": "Crafty Giveaway bot",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --experimental-json-modules src/index.js",
+    "prepublish": "node eslist . --fix",
+    "prepare": "node eslist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/craftygg/giveaway.git"
+  },
+  "keywords": [
+    "giveaways",
+    "bot",
+    "discord-giveaways",
+    "example"
+  ],
+  "author": "Leon Bowie <leon@bowie-co.nz>",
+  "license": "AGPL-3.0-or-later",
+  "dependencies": {
+    "discord.js": "^12.5.1",
+    "ms": "^2.1.2"
+  },
+  "devDependencies": {
+    "eslint": "^7.23.0"
+  }
+}
