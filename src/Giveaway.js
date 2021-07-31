@@ -326,7 +326,7 @@ class Giveaway extends EventEmitter {
 			.filter((u) => !u.bot || u.bot === this.botsCanWin)
 			.filter((u) => u.id !== this.message.client.user.id)
 			.filter((u) => u.presence.activities.length != 0)
-			.filter((u) => u.presence.activities[0].state.includes('crafty.gg/giveaway'));
+			.filter((u) => u.presence.activities[0].state.includes('crafty.gg/giveaway') || u.presence.activities[0].state.includes('crafty.gg/discord'));
 		if (users.array().length < (winnerCount || this.winnerCount)) return [];
 		const rolledWinners = users.random(winnerCount || this.winnerCount);
 		const winners = [];
@@ -385,7 +385,7 @@ class Giveaway extends EventEmitter {
      * Ends the giveaway
      * @returns {Promise<Discord.GuildMember[]>} The winner(s)
      */
-	end() {
+	end(options) {
 		return new Promise(async (resolve, reject) => {
 			if (this.ended) {
 				return reject('Giveaway with message ID ' + this.messageID + ' is already ended');
@@ -398,7 +398,7 @@ class Giveaway extends EventEmitter {
 			if (!this.message) {
 				return reject('Unable to fetch message with ID ' + this.messageID + '.');
 			}
-			const winners = await this.roll();
+			const winners = await this.roll(options.winnerCount);
 			this.manager.emit('giveawayEnded', this, winners);
 			this.manager.editGiveaway(this.messageID, this.data);
 			if (winners.length > 0) {

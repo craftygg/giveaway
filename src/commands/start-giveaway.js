@@ -50,7 +50,7 @@ export async function run(client, message, args) {
 			giveaway: (client.config.everyoneMention ? '@everyone\n\n' : '') + '🎉🎉 **GIVEAWAY** 🎉🎉',
 			giveawayEnded: (client.config.everyoneMention ? '@everyone\n\n' : '') + '🎉🎉 **GIVEAWAY ENDED** 🎉🎉',
 			timeRemaining: 'Time remaining: **{duration}**!',
-			inviteToParticipate: 'React with 🎉 to participate!\n Make sure that `crafty.gg/giveaway` is your status and you are online.',
+			inviteToParticipate: 'React with 🎉 to participate!\n Make sure that `crafty.gg/giveaway` is your custom status and **you are online** at the time of the giveaway ending.',
 			winMessage: 'Congratulations, {winners}! You won **{prize}**!',
 			embedFooter: 'Giveaways',
 			noWinner: 'Giveaway cancelled, no valid participations.',

@@ -126,7 +126,7 @@ class GiveawaysManager extends EventEmitter {
 			if (!giveaway) {
 				return reject('No giveaway found with ID ' + messageID + '.');
 			}
-			giveaway.end().then(resolve).catch(reject);
+			giveaway.end(this.options).then(resolve).catch(reject);
 		});
 	}
 

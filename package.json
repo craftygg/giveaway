@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Crafty Giveaway bot",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "start": "node --experimental-json-modules src/index.js",
     "prepublish": "node eslist . --fix",
@@ -21,6 +22,7 @@
   "author": "Leon Bowie <leon@bowie-co.nz>",
   "license": "AGPL-3.0-or-later",
   "dependencies": {
+    "deepmerge": "^4.2.2",
     "discord.js": "^12.5.1",
     "ms": "^2.1.2"
   },

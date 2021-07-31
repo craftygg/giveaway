@@ -7,7 +7,7 @@ export const GiveawayStartOptions = {};
 export const defaultGiveawayMessages = {
 	giveaway: '@everyone\n\n🎉🎉 **GIVEAWAY** 🎉🎉',
 	giveawayEnded: '@everyone\n\n🎉🎉 **GIVEAWAY ENDED** 🎉🎉',
-	inviteToParticipate: 'React with 🎉 to participate!\n Make sure that `crafty.gg/giveaway` is your status and you are online.',
+	inviteToParticipate: 'React with 🎉 to participate!\n Make sure that `crafty.gg/giveaway` is in your custom status and **you are online** at the time of the giveaway ending.',
 	timeRemaining: 'Time remaining: **{duration}**',
 	winMessage: 'Congratulations, {winners}! You won **{prize}**!\n{messageURL}',
 	embedFooter: 'Powered by the discord-giveaways package',
