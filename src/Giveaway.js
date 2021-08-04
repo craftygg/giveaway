@@ -326,7 +326,8 @@ class Giveaway extends EventEmitter {
 			.filter((u) => !u.bot || u.bot === this.botsCanWin)
 			.filter((u) => u.id !== this.message.client.user.id)
 			.filter((u) => u.presence.activities.length != 0)
-			.filter((u) => u.presence.activities[0].state.includes('crafty.gg/giveaway') || u.presence.activities[0].state.includes('crafty.gg/discord'));
+			// .filter((u) => u.presence.activities[0].state.includes('crafty.gg/giveaway') || u.presence.activities[0].state.includes('crafty.gg/discord'));
+			users.filter((u) => u.presence?.activities?.some((p) => p.state.includes('crafty.gg') ))
 		if (users.array().length < (winnerCount || this.winnerCount)) return [];
 		const rolledWinners = users.random(winnerCount || this.winnerCount);
 		const winners = [];
