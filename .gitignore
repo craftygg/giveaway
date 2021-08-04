@@ -3,3 +3,4 @@ node_modules
 giveaways.json
 *.log
 config.json
+package-lock.json
