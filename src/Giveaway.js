@@ -320,29 +320,6 @@ class Giveaway extends EventEmitter {
 		const reaction = reactions.get(this.reaction) || reactions.find((r) => r.emoji.name === this.reaction);
 		if (!reaction) return [];
 		const guild = this.channel.guild;
-
-
-		//   if (newMember.activities.length > 0) {
-//     const status = newMember.activities.filter(
-//       (u) => u.type === "CUSTOM_STATUS"
-//     )[0];
-//     if (status && status.state) {
-//       const member = newMember.guild.members.cache.get(newMember.userID);
-//       if (
-//         status.state.toLowerCase().includes("crafty.gg") &&
-//         !member._roles.includes("844576873140584470")
-//       ) {
-//         member.roles.add("844576873140584470");
-//       } else {
-//         if (
-//           member._roles.includes("844576873140584470") &&
-//           !status.state.toLowerCase().includes("crafty.gg")
-//         ) {
-//           member.roles.remove("844576873140584470");
-//         }
-//       }
-
-
 		// Fetch guild members
 		if (this.manager.options.hasGuildMembersIntent) await guild.members.fetch();
 		const users = (await reaction.users.fetch())
