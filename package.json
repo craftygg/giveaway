@@ -5,9 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node --experimental-json-modules src/index.js",
-    "prepublish": "node eslist . --fix",
-    "prepare": "node eslist"
+    "start": "node --experimental-json-modules src/index.js"
   },
   "repository": {
     "type": "git",
@@ -23,7 +21,7 @@
   "license": "AGPL-3.0-or-later",
   "dependencies": {
     "deepmerge": "^4.2.2",
-    "discord.js": "^12.5.1",
+    "discord.js": "git://github.com/discordjs/discord.js.git#3af8179878c093985c8a94ee2fd7e99d45243bda",
     "ms": "^2.1.2"
   },
   "devDependencies": {
