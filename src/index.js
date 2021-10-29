@@ -17,7 +17,7 @@ client.config = config;
 import GiveawaysManager from "./Manager.js";
 client.giveawaysManager = new GiveawaysManager(client, {
   storage: "./giveaways.json",
-  updateCountdownEvery: 5000,
+  updateCountdownEvery: config.updateCountdownEvery,
   default: {
     botsCanWin: false,
     embedColor: "#FF0000",

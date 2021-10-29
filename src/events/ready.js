@@ -1,5 +1,5 @@
 export default (client) => {
-  client.user.setActivity("for crafty.gg/giveaway in custom status", {
+  client.user.setActivity("crafty.gg/giveaway in custom status", {
     type: "WATCHING",
   });
   console.log(

@@ -1,5 +1,7 @@
 import Discord from "discord.js";
 
+import config from "../config.json";
+
 export const GiveawayMessages = {};
 
 export const GiveawayStartOptions = {};
@@ -29,7 +31,7 @@ export const GiveawaysManagerOptions = {};
 
 export const defaultManagerOptions = {
   storage: "./giveaways.json",
-  updateCountdownEvery: 5000,
+  updateCountdownEvery: config.updateCountdownEvery,
   endedGiveawaysLifetime: 0,
   hasGuildMemberIntent: false,
   default: {
