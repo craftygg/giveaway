@@ -21,7 +21,7 @@
   "license": "AGPL-3.0-or-later",
   "dependencies": {
     "deepmerge": "^4.2.2",
-    "discord.js": "git://github.com/discordjs/discord.js.git#3af8179878c093985c8a94ee2fd7e99d45243bda",
+    "discord.js": "git://github.com/discordjs/discord.js.git#51551f544b80d7d27ab0b315da01dfc560b2c115",
     "ms": "^2.1.2"
   },
   "devDependencies": {
